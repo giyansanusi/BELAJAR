@@ -1,0 +1,132 @@
+RESUME VB 
+
+asp classic pake view engine aspx (beda sama yang terbaru, razor)
+untuk logic nya dia pake VB, konsepnya sendiri si VB nempel di belakang 
+file aspx (code behind) jadi untuk ekstensi file aspx nya blabla.aspx untuk vb nya
+blabla.aspx.vb namun ada juga ekstensi file spt blabla.aspx.cs <= untuk c# 
+
+file asp ada beberapa macam 
+1. aspx => web page standard
+2. ascx => aspx partial/ terpisah, bisa di include di page aspx 
+(pernah liat di BPM template, ada di bagian list task to do, jadi masing2 task todo 
+bisa nge cache masing2 per aspx )
+3. ashx => menangani HTTPrequest dan modifikasi Httprespon (belum pernah lihat) 
+4. asmx => Menangani SOAP service (belum pernah liat)
+
+ada beberapa tipe tag di aspx
+<%  %> konsep nya kurang lebih sama aja 
+kayak razor yang pake @
+
+variabel
+dim kependekan dari dimension, di buat untuk 
+deklarasi variabel di VB(VBScripts?) untuk tipe data 
+yang tidak terdefinisi(data nya bisa apa aja
+, sama kayak var di javascript) tapi tetep harus di assign 
+misal 
+
+dim isMember as boolean = true
+
+VB != VB.net, VB.net adalah pengembangan dari VB (sudah OOP)
+struktur syntax nya tidak sama seperti C/java/c# yang menggunakan ';'
+di akhir statement dan beberapa hal lain yang 
+tidak di gunakan spt penggunaan '{' & '}'.
+kurang lebih kayak python, pake indent.
+
+byval dan byref
+byval dan byref merupakan syntax di VB yang untuk menentukan metode passing sebuah parameter
+byval merupakan metode passing menggunakan nilai
+sementara byref merupakan metode passing parameter berdasarkan reference/ acuan
+jadi yang di passing bukan nilai nya melainkan penunjuk tempat dimana nilai sebenarnya di simpan.
+
+konsep code behind
+secara garis besar codebehind dapat diartikan sebagai sebuah file yang menempel pada page
+aspx yang di khususkan untuk menghandle sega hal yang bekaitan dengan logic dari web page tsbt
+eksekusi logic dari aksi yang diberikan user dari view ( via button, text field, dll )
+dilakukan di dalam VB ataupun C# yang merupakan codebehind dari halaman aspx yang 
+bersangkutan. Misal 
+
+aspx nya
+login.aspx
+<button id="tekansaya">
+
+vb nya
+login.aspx.vb
+private sub tekanTombol(sender As Object, e As EventArgs) Handles tekansaya.Click
+
+	/*di sini logic*/
+
+end sub 
+
+tekansaya di ambil dari properti id pada tag button yang ada pada file aspx, jadi
+secara tidak langsung penghubung antara aspx(web page) dengan VB ataupun C#.
+
+Array
+untuk pendefinisian array secara konsep sama saja sebenarnya, hanya karena penulisan
+nya agak berbeda jadi seakan akan mengerikan
+pendefinisian array dapat dilakukan seperti ini
+
+Dim namaOrang(10) as String //define 11 slot elemen string (penghitungan array dimulai dari 0)  
+Dim namaOrang() as String = {'maman', 'euis', 'lilis'} //assign elemen string tanpa mendefinisikan slot array (dinamis)
+
+untuk loop dapat dilakukan dengan 
+
+dim n(5) as Integer = {1, 2, 3, 4, 5}
+dim i as Integer
+For i = 0 To 5
+          Console.WriteLine(n(i))  
+Next i
+
+untuk penggunaan class dan object secara garis besar sama dengan bahasa pemograman
+OOP lain nya, kita bisa mengakses method ataupun variabel dari sebuah objek 
+yang telah di instansiasi terlebih dahulu
+
+misal
+(ceritanya terdapat class Mobil yang memiliki beberapa attribut) 
+Dim Mobil as new mobil1
+
+mobil1.warna = "kuning"
+mobil1.kecepatan = 120
+mobil1.harga = 20000000
+
+dst.. dst..
+
+untuk method pada dasarnya sama saja hanya syntax yang berbeda
+misal function
+
+Function nilaiMax(ByVal num1 As Integer, ByVal num2 As Integer) As Integer
+	/*Logic disini*/
+	nilaiMax = result //hasil perhitungan
+End Function 
+
+
+
+
+
+ 
+
+jadi kondisi disini sekarang pak kami ada di 
+divisi support, untuk divisi support sendiri 
+lebih condong ke penggunaan tools yang telah disediakan
+untuk troubelshoot dan maintenance permasalhan 
+dari user. Untuk keperluan teknis di divisi support
+tidak terlalu banyak digunakan kecuali keterampilan untuk debug
+apabila permasalahan yang ada memang di haruskan untuk sampai membuka
+kodingan. Pada saat debug yang banyak digunakan yaitu
+membedah SP di MS SQL, pengetahuan dasar C#, VB, serta ASP dan javascriptnya.
+untuk kendala ada di dua sisi pak, yang pertama pengambilan keputusan apa yang harus 
+dilakukan  dari permasalahan yang di beri user. varian masalah nya berbeda beda meliputi workflow, service, dan web nya
+meskipun untuk workflow dan sebagian web serta service sudah dapat di cover oleh tools yang disediakan tapi ada beberapa permasalahan 
+yang memang harus langsung terjun ke dalam kodingan, disini keterampilan untuk debug lebih dibutuhkan.
+
+
+yang harus di cari perbedaan aspx ashx dan ascx
+code behind apa itu
+
+
+memasukan no token selalu kembali ke awal menu dan tidak dapat mengakses BPM mobile memalui HP 
+
+
+List link
+mengenai function/method lebih advance disini
+https://www.tutorialspoint.com/vb.net/vb.net_functions.htm
+http://stackoverflow.com/questions/5217601/when-do-you-need-ascx-files-and-how-would-you-use-them

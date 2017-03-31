@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+<!-- saved from url=(0423)http://disqus.com/embed/comments/?base=default&version=e04dc5565ac38ab1b60d822e9074b9ab&f=coding4ever&t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&s_o=default -->
+<html lang="en" dir="ltr" class="js no-touch localstorage sessionstorage contenteditable use-opacity-transitions"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Disqus Comments</title>
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <style>
+        .alert--warning {
+            border-radius: 3px;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            background-color: #FFE070;
+            color: #A47703;
+        }
+
+        .alert--warning a,
+        .alert--warning a:hover,
+        .alert--warning strong {
+            color: #A47703;
+            font-weight: bold;
+        }
+
+        .alert--error p,
+        .alert--warning p {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        
+        </style>
+    
+    <style>
+        html {
+            overflow: hidden;
+        }
+
+        #error {
+            display: none;
+        }
+
+        .clearfix:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        
+    </style>
+
+<link rel="stylesheet" href="./lounge.a3a57ad85a05cd1a2246998678f4c640.css"><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="remote/config" src="./config.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="common.bundle" src="./common.bundle.2df0d34cb42e6b850b20e6caf78c1a21.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="lounge.bundle" src="./lounge.bundle.c244771484a2af84b930478cca441f52.js.download"></script><style id="css_1477469717959"></style><!--<base target="_parent">--><base href="." target="_parent"><link rel="stylesheet" href="./discovery.ec9371c4ef39ecee074c2acf24d5e0e2.css"><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="ga" src="./ga.js(1).download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="discovery/main" src="./discovery.bundle.c9784b21df6c44c697e33b47f55afd1b.js.download"></script></head>
+<body class="serif">
+    
+
+    
+    <div id="error" class="alert--error">
+        <p>We were unable to load Disqus. If you are a moderator please see our <a href="https://docs.disqus.com/help/83/"> troubleshooting guide</a>. </p>
+    </div>
+
+    
+    <script type="text/json" id="disqus-forumData">{"session":{"canModerate":false,"audienceSyncVerified":false,"mustVerify":false,"canReply":true,"mustVerifyEmail":false},"features":{},"forum":{"category":"Tech","description":"","founder":"106300738","twitterName":"","url":"http://coding4ever.net/","raw_description":"","guidelines":null,"favicon":{"permalink":"http://disqus.com/api/forums/favicons/coding4ever.jpg","cache":"//a.disquscdn.com/uploads/forums/300/2742/favicon.png"},"raw_guidelines":null,"language":"en","daysThreadAlive":0,"installCompleted":true,"avatar":{"small":{"permalink":"http://disqus.com/api/forums/avatars/coding4ever.jpg?size=32","cache":"//a.disquscdn.com/1476221545/images/noavatar32.png"},"large":{"permalink":"http://disqus.com/api/forums/avatars/coding4ever.jpg?size=92","cache":"//a.disquscdn.com/1476221545/images/noavatar92.png"}},"channel":null,"daysAlive":0,"pk":"3002742","signedUrl":"http://disq.us/?url=http%3A%2F%2Fcoding4ever.net%2F&key=MWlHLAHIEkGu_fCOF8UFBw","settings":{"supportLevel":0,"adsDRNativeEnabled":false,"disable3rdPartyTrackers":false,"moderatorText":"Moderator","adsProductVideoEnabled":false,"adsPositionTopEnabled":false,"ssoRequired":false,"unapproveLinks":false,"linkAffiliationEnabled":false,"adsProductLinksThumbnailsEnabled":false,"adsProductStoriesEnabled":false,"organicDiscoveryEnabled":true,"allowMedia":true,"discoveryMax":false,"discoveryLocked":false,"adsVideoEnabled":false,"adsEnabled":false,"allowAnonPost":true,"hasCustomAvatar":false,"adultContent":false,"promotedDiscoveryEnabled":false,"allowAnonVotes":false,"mustVerify":true,"colorScheme":"auto","adsSettingsLocked":false,"mustVerifyEmail":true,"audienceSyncEnabled":false,"typeface":"auto","adsPositionBottomEnabled":false,"mediaembedEnabled":true,"adsProductLinksEnabled":false,"validateAllPosts":false,"discoveryThumbnailsEnabled":false,"isVIP":false,"adsPositionInthreadEnabled":false},"id":"coding4ever","createdAt":"2014-05-08T21:39:00.550209","name":"Coding4ever's Blog"}}</script>
+
+    
+    <script type="text/json" id="disqus-threadData">{"cursor":{"hasPrev":false,"prev":null,"total":11,"hasNext":false,"next":"1:0:0"},"code":0,"response":{"lastModified":1448423288,"posts":[{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>artikel yang menarik, tapi setelah saya coba implementasikan (saya mengunakan cara mapping Data Annotations) ada sedikit yang tidak sesuai, syntax [Table(\"NamaTableDatabase\")] tidak ada (error/tidak ada keyword \"Table\") dan pertanyaan yang kedua, saya mengunakan table Gedung (ID,NamaGedung) dan membuat Class Gedung dengan property yang sama setelah jalankan muncul pesan error invalid Object name dbo.Gedungs. Setelah saya ganti nama table di database dari Gedung menjadi Gedungs tidak terjadi error, kode di program.cs sama persis seperti contoh cuma beda table saja. kira-kira yang salah apa ya ? mohon pencerahannya ^^\u003c/p>","id":"2374312576","isDeleted":false,"author":{"username":"rizal_irawan","about":"","name":"RizaL Irawan","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.2324929999999998,"profileUrl":"https://disqus.com/by/rizal_irawan/","url":"","reputation":1.2324929999999998,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2015-11-23T09:11:14","id":"183925928","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/rizal_irawan.jpg","cache":"//a.disquscdn.com/1476221545/images/noavatar32.png"},"isCustom":false,"permalink":"http://disqus.com/api/users/avatars/rizal_irawan.jpg","cache":"//a.disquscdn.com/1476221545/images/noavatar92.png","large":{"permalink":"http://disqus.com/api/users/avatars/rizal_irawan.jpg","cache":"//a.disquscdn.com/1476221545/images/noavatar92.png"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2015-11-23T09:24:23","parent":null,"isApproved":true,"isFlagged":false,"raw_message":"artikel yang menarik, tapi setelah saya coba implementasikan (saya mengunakan cara mapping Data Annotations) ada sedikit yang tidak sesuai, syntax [Table(\"NamaTableDatabase\")] tidak ada (error/tidak ada keyword \"Table\") dan pertanyaan yang kedua, saya mengunakan table Gedung (ID,NamaGedung) dan membuat Class Gedung dengan property yang sama setelah jalankan muncul pesan error invalid Object name dbo.Gedungs. Setelah saya ganti nama table di database dari Gedung menjadi Gedungs tidak terjadi error, kode di program.cs sama persis seperti contoh cuma beda table saja. kira-kira yang salah apa ya ? mohon pencerahannya ^^","isHighlighted":false,"canVote":false,"thread":"2674854430","forum":"coding4ever","depth":0,"points":0,"isEdited":true},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Untuk mapping menggunakan Data Annotations butuh namespace System.ComponentModel.DataAnnotations.\u003c/p>\u003cp>Trus untuk VSnya pake versi brp ?\u003c/p>","id":"2375716219","isDeleted":false,"author":{"username":"coding4ever","about":"","name":"Admin","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.365966,"profileUrl":"https://disqus.com/by/coding4ever/","url":"http://coding4ever.net/","reputation":1.365966,"location":"","isPrivate":false,"signedUrl":"http://disq.us/?url=http%3A%2F%2Fcoding4ever.net%2F&key=MWlHLAHIEkGu_fCOF8UFBw","isPrimary":true,"joinedAt":"2014-05-08T23:42:29","id":"106300738","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/coding4ever.jpg","cache":"//a.disquscdn.com/uploads/users/10630/738/avatar32.jpg?1417663210"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/coding4ever.jpg","cache":"//a.disquscdn.com/uploads/users/10630/738/avatar92.jpg?1417663210","large":{"permalink":"http://disqus.com/api/users/avatars/coding4ever.jpg","cache":"//a.disquscdn.com/uploads/users/10630/738/avatar92.jpg?1417663210"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2015-11-24T03:46:55","parent":2374312576,"isApproved":true,"isFlagged":false,"raw_message":"Untuk mapping menggunakan Data Annotations butuh namespace System.ComponentModel.DataAnnotations.\n\nTrus untuk VSnya pake versi brp ?","isHighlighted":false,"canVote":false,"thread":"2674854430","forum":"coding4ever","depth":1,"points":0,"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>sudah saya kasih namespacenya, iya kayaknya gara2 versi visual studionya nya, saya pakai vs 2012 untuk key [Table(\"NamaTable\")] memang tidak ada\u003c/p>","id":"2377523515","isDeleted":false,"author":{"username":"rizal_irawan","about":"","name":"RizaL Irawan","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.2324929999999998,"profileUrl":"https://disqus.com/by/rizal_irawan/","url":"","reputation":1.2324929999999998,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2015-11-23T09:11:14","id":"183925928","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/rizal_irawan.jpg","cache":"//a.disquscdn.com/1476221545/images/noavatar32.png"},"isCustom":false,"permalink":"http://disqus.com/api/users/avatars/rizal_irawan.jpg","cache":"//a.disquscdn.com/1476221545/images/noavatar92.png","large":{"permalink":"http://disqus.com/api/users/avatars/rizal_irawan.jpg","cache":"//a.disquscdn.com/1476221545/images/noavatar92.png"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2015-11-25T03:48:07","parent":2375716219,"isApproved":true,"isFlagged":false,"raw_message":"sudah saya kasih namespacenya, iya kayaknya gara2 versi visual studionya nya, saya pakai vs 2012 untuk key [Table(\"NamaTable\")] memang tidak ada","isHighlighted":false,"canVote":false,"thread":"2674854430","forum":"coding4ever","depth":2,"points":0,"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Om mau tanya kalo untuk MySQL bagaimana ya?\u003c/p>","id":"2121880319","isDeleted":false,"author":{"username":"dwi_randy_herdinanto","about":"","name":"Dwi Randy Herdinanto","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.2339689999999999,"profileUrl":"https://disqus.com/by/dwi_randy_herdinanto/","url":"http://www.tutorialkoding.id/","reputation":1.2339689999999999,"location":"","isPrivate":false,"signedUrl":"http://disq.us/?url=http%3A%2F%2Fwww.tutorialkoding.id%2F&key=WvSNyQoQiFmVVZWqXWRaRg","isPrimary":true,"joinedAt":"2015-07-07T18:16:04","id":"164553778","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/dwi_randy_herdinanto.jpg","cache":"//a.disquscdn.com/1476221545/images/noavatar32.png"},"isCustom":false,"permalink":"http://disqus.com/api/users/avatars/dwi_randy_herdinanto.jpg","cache":"//a.disquscdn.com/1476221545/images/noavatar92.png","large":{"permalink":"http://disqus.com/api/users/avatars/dwi_randy_herdinanto.jpg","cache":"//a.disquscdn.com/1476221545/images/noavatar92.png"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2015-07-07T18:16:13","parent":null,"isApproved":true,"isFlagged":false,"raw_message":"Om mau tanya kalo untuk MySQL bagaimana ya?","isHighlighted":false,"canVote":false,"thread":"2674854430","forum":"coding4ever","depth":0,"points":0,"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Sama aja, cuma untuk ADO.NET Providernya pake \u003ca href=\"https://www.nuget.org/packages/MySql.Data.Entity/\" rel=\"nofollow\">MySql.Data.Entity\u003c/a>, untuk kode program tidak ada perubahan.\u003c/p>","id":"2122737378","isDeleted":false,"author":{"username":"coding4ever","about":"","name":"Admin","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.365966,"profileUrl":"https://disqus.com/by/coding4ever/","url":"http://coding4ever.net/","reputation":1.365966,"location":"","isPrivate":false,"signedUrl":"http://disq.us/?url=http%3A%2F%2Fcoding4ever.net%2F&key=MWlHLAHIEkGu_fCOF8UFBw","isPrimary":true,"joinedAt":"2014-05-08T23:42:29","id":"106300738","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/coding4ever.jpg","cache":"//a.disquscdn.com/uploads/users/10630/738/avatar32.jpg?1417663210"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/coding4ever.jpg","cache":"//a.disquscdn.com/uploads/users/10630/738/avatar92.jpg?1417663210","large":{"permalink":"http://disqus.com/api/users/avatars/coding4ever.jpg","cache":"//a.disquscdn.com/uploads/users/10630/738/avatar92.jpg?1417663210"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2015-07-08T03:00:50","parent":2121880319,"isApproved":true,"isFlagged":false,"raw_message":"Sama aja, cuma untuk ADO.NET Providernya pake \u003ca href=\"https://www.nuget.org/packages/MySql.Data.Entity/\" target=\"_blank\">MySql.Data.Entity\u003c/a>, untuk kode program tidak ada perubahan.","isHighlighted":false,"canVote":false,"thread":"2674854430","forum":"coding4ever","depth":1,"points":0,"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>oiya om mau tanya lagi ni :D\u003cbr>kenapa ya ketika pertama kali load data dari database memakan waktu yang cukup lama?\u003c/p>","id":"2133161863","isDeleted":false,"author":{"username":"dwi_randy_herdinanto","about":"","name":"Dwi Randy Herdinanto","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.2339689999999999,"profileUrl":"https://disqus.com/by/dwi_randy_herdinanto/","url":"http://www.tutorialkoding.id/","reputation":1.2339689999999999,"location":"","isPrivate":false,"signedUrl":"http://disq.us/?url=http%3A%2F%2Fwww.tutorialkoding.id%2F&key=WvSNyQoQiFmVVZWqXWRaRg","isPrimary":true,"joinedAt":"2015-07-07T18:16:04","id":"164553778","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/dwi_randy_herdinanto.jpg","cache":"//a.disquscdn.com/1476221545/images/noavatar32.png"},"isCustom":false,"permalink":"http://disqus.com/api/users/avatars/dwi_randy_herdinanto.jpg","cache":"//a.disquscdn.com/1476221545/images/noavatar92.png","large":{"permalink":"http://disqus.com/api/users/avatars/dwi_randy_herdinanto.jpg","cache":"//a.disquscdn.com/1476221545/images/noavatar92.png"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2015-07-13T12:07:31","parent":2122737378,"isApproved":true,"isFlagged":false,"raw_message":"oiya om mau tanya lagi ni :D\nkenapa ya ketika pertama kali load data dari database memakan waktu yang cukup lama?","isHighlighted":false,"canVote":false,"thread":"2674854430","forum":"coding4ever","depth":2,"points":0,"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Ya jelaslah om, engine entity framework itukan cukup komplek, jadi pada saat startup kan ada proses mengenerate objek berdasarkan konfigurasi mapping, jadi semakin banyak tabelnya ya semakin berart.\u003c/p>\u003cp>Tapi ada beberapa tip untuk meningkatkan kinerja entity framework misalnya menonaktifkan fitur Lazy Loading dan Dynamic Proxies.\u003c/p>\u003cp>Berarti uji coba EF ke MySQL berhasil nih ?\u003c/p>","id":"2133317478","isDeleted":false,"author":{"username":"coding4ever","about":"","name":"Admin","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.365966,"profileUrl":"https://disqus.com/by/coding4ever/","url":"http://coding4ever.net/","reputation":1.365966,"location":"","isPrivate":false,"signedUrl":"http://disq.us/?url=http%3A%2F%2Fcoding4ever.net%2F&key=MWlHLAHIEkGu_fCOF8UFBw","isPrimary":true,"joinedAt":"2014-05-08T23:42:29","id":"106300738","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/coding4ever.jpg","cache":"//a.disquscdn.com/uploads/users/10630/738/avatar32.jpg?1417663210"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/coding4ever.jpg","cache":"//a.disquscdn.com/uploads/users/10630/738/avatar92.jpg?1417663210","large":{"permalink":"http://disqus.com/api/users/avatars/coding4ever.jpg","cache":"//a.disquscdn.com/uploads/users/10630/738/avatar92.jpg?1417663210"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2015-07-13T13:54:48","parent":2133161863,"isApproved":true,"isFlagged":false,"raw_message":"Ya jelaslah om, engine entity framework itukan cukup komplek, jadi pada saat startup kan ada proses mengenerate objek berdasarkan konfigurasi mapping, jadi semakin banyak tabelnya ya semakin berart.\n\nTapi ada beberapa tip untuk meningkatkan kinerja entity framework misalnya menonaktifkan fitur Lazy Loading dan Dynamic Proxies.\n\n\nBerarti uji coba EF ke MySQL berhasil nih ?","isHighlighted":false,"canVote":false,"thread":"2674854430","forum":"coding4ever","depth":3,"points":0,"isEdited":true},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Terima kasih om untuk penjelasannya :)\u003cbr>akan sy coba tip Lazy loading dan dynamic proxiesnya\u003c/p>\u003cp>iya om sudah berhasil untuk EF ke MySQLnya\u003c/p>","id":"2133680017","isDeleted":false,"author":{"username":"dwi_randy_herdinanto","about":"","name":"Dwi Randy Herdinanto","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.2339689999999999,"profileUrl":"https://disqus.com/by/dwi_randy_herdinanto/","url":"http://www.tutorialkoding.id/","reputation":1.2339689999999999,"location":"","isPrivate":false,"signedUrl":"http://disq.us/?url=http%3A%2F%2Fwww.tutorialkoding.id%2F&key=WvSNyQoQiFmVVZWqXWRaRg","isPrimary":true,"joinedAt":"2015-07-07T18:16:04","id":"164553778","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/dwi_randy_herdinanto.jpg","cache":"//a.disquscdn.com/1476221545/images/noavatar32.png"},"isCustom":false,"permalink":"http://disqus.com/api/users/avatars/dwi_randy_herdinanto.jpg","cache":"//a.disquscdn.com/1476221545/images/noavatar92.png","large":{"permalink":"http://disqus.com/api/users/avatars/dwi_randy_herdinanto.jpg","cache":"//a.disquscdn.com/1476221545/images/noavatar92.png"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2015-07-13T16:36:20","parent":2133317478,"isApproved":true,"isFlagged":false,"raw_message":"Terima kasih om untuk penjelasannya :)\nakan sy coba tip Lazy loading dan dynamic proxiesnya \n\niya om sudah berhasil untuk EF ke MySQLnya","isHighlighted":false,"canVote":false,"thread":"2674854430","forum":"coding4ever","depth":4,"points":0,"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Oke sippp :)\u003c/p>","id":"2134640754","isDeleted":false,"author":{"username":"coding4ever","about":"","name":"Admin","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.365966,"profileUrl":"https://disqus.com/by/coding4ever/","url":"http://coding4ever.net/","reputation":1.365966,"location":"","isPrivate":false,"signedUrl":"http://disq.us/?url=http%3A%2F%2Fcoding4ever.net%2F&key=MWlHLAHIEkGu_fCOF8UFBw","isPrimary":true,"joinedAt":"2014-05-08T23:42:29","id":"106300738","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/coding4ever.jpg","cache":"//a.disquscdn.com/uploads/users/10630/738/avatar32.jpg?1417663210"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/coding4ever.jpg","cache":"//a.disquscdn.com/uploads/users/10630/738/avatar92.jpg?1417663210","large":{"permalink":"http://disqus.com/api/users/avatars/coding4ever.jpg","cache":"//a.disquscdn.com/uploads/users/10630/738/avatar92.jpg?1417663210"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2015-07-14T01:52:02","parent":2133680017,"isApproved":true,"isFlagged":false,"raw_message":"Oke sippp :)","isHighlighted":false,"canVote":false,"thread":"2674854430","forum":"coding4ever","depth":5,"points":0,"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Artikelnya bagus\u00b2 gan, thx ... :)\u003c/p>","id":"1468008420","isDeleted":false,"author":{"username":"dimaslazuardyimani","about":"","name":"Dimas Lazuardy Imani","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.236183,"profileUrl":"https://disqus.com/by/dimaslazuardyimani/","url":"","reputation":1.236183,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2014-07-04T08:56:13","id":"113111102","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/dimaslazuardyimani.jpg","cache":"//a.disquscdn.com/uploads/users/11311/1102/avatar32.jpg?1404464315"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/dimaslazuardyimani.jpg","cache":"//a.disquscdn.com/uploads/users/11311/1102/avatar92.jpg?1404464315","large":{"permalink":"http://disqus.com/api/users/avatars/dimaslazuardyimani.jpg","cache":"//a.disquscdn.com/uploads/users/11311/1102/avatar92.jpg?1404464315"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2014-07-04T08:57:22","parent":null,"isApproved":true,"isFlagged":false,"raw_message":"Artikelnya bagus\u00b2 gan, thx ... :)","isHighlighted":false,"canVote":false,"thread":"2674854430","forum":"coding4ever","depth":0,"points":0,"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Sama-sama om :)\u003c/p>","id":"1469002339","isDeleted":false,"author":{"username":"coding4ever","about":"","name":"Admin","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.365966,"profileUrl":"https://disqus.com/by/coding4ever/","url":"http://coding4ever.net/","reputation":1.365966,"location":"","isPrivate":false,"signedUrl":"http://disq.us/?url=http%3A%2F%2Fcoding4ever.net%2F&key=MWlHLAHIEkGu_fCOF8UFBw","isPrimary":true,"joinedAt":"2014-05-08T23:42:29","id":"106300738","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/coding4ever.jpg","cache":"//a.disquscdn.com/uploads/users/10630/738/avatar32.jpg?1417663210"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/coding4ever.jpg","cache":"//a.disquscdn.com/uploads/users/10630/738/avatar92.jpg?1417663210","large":{"permalink":"http://disqus.com/api/users/avatars/coding4ever.jpg","cache":"//a.disquscdn.com/uploads/users/10630/738/avatar92.jpg?1417663210"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2014-07-05T01:27:42","parent":1468008420,"isApproved":true,"isFlagged":false,"raw_message":"Sama-sama om :)","isHighlighted":false,"canVote":false,"thread":"2674854430","forum":"coding4ever","depth":1,"points":0,"isEdited":false}],"thread":{"feed":"https://coding4ever.disqus.com/entity_framework_part_2_coding4evers_blog_81/latest.rss","identifiers":["http://coding4ever.net/blog/2014/03/21/entity-framework-part-2/"],"dislikes":0,"likes":0,"message":"","id":"2674854430","isDeleted":false,"category":"3047787","author":"106300738","userScore":0,"userSubscription":false,"isSpam":false,"signedLink":"http://disq.us/?url=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&key=Bv37duXAhqYxhivNAYum4w","createdAt":"2014-05-10T14:01:12","hasStreaming":false,"raw_message":"","isClosed":false,"link":"http://coding4ever.net/blog/2014/03/21/entity-framework-part-2/","slug":"entity_framework_part_2_coding4evers_blog_81","forum":"coding4ever","clean_title":"Entity Framework Part 2","posts":11,"moderators":[106300738],"title":"Entity Framework Part 2 - Coding4ever's Blog","highlightedPost":null}},"order":"popular"}</script>
+
+    
+
+    <div id="fixed-content"></div>
+
+
+    
+        
+<script type="text/json" id="disqus-urls">{
+    "root":"//disqus.com",
+    "next":"//a.disquscdn.com/next/current/embed"
+}</script>
+
+        <script src="./lounge.load.e04dc5565ac38ab1b60d822e9074b9ab.js.download" id="bootstrap-script" data-app="lounge" crossorigin="anonymous" async=""></script>
+    
+
+
+<iframe style="display: none;" src="./saved_resource(2).html"></iframe><div id="layout" data-tracking-area="layout">
+
+<div id="onboard" data-tracking-area="onboard"></div>
+
+<div id="highlighted-post" data-tracking-area="highlighted" class="highlighted-post" style="display: none;"></div>
+
+<div id="global-alert"></div>
+
+<header id="main-nav" data-tracking-area="main-nav">
+<nav class="nav nav-primary">
+<ul>
+<li class="nav-tab nav-tab--primary tab-conversation active" data-role="post-count"><a class="publisher-nav-color">
+<span class="comment-count">
+11 comments
+</span>
+
+<span class="comment-count-placeholder">
+Comments
+</span>
+</a>
+</li>
+<li class="nav-tab nav-tab--primary tab-community">
+<a href="https://disqus.com/home/forums/coding4ever/" class="publisher-nav-color" data-action="community-sidebar" data-forum="coding4ever" id="community-tab">
+<span class="community-name">
+<strong>Coding4ever's Blog</strong>
+
+</span>
+
+<strong class="community-name-placeholder">Community</strong>
+</a>
+</li>
+<li class="nav-tab nav-tab--primary dropdown user-menu" data-role="logout"><a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" class="dropdown-toggle" data-toggle="dropdown">
+<span class="dropdown-toggle-wrapper">
+
+<span>
+Login
+</span>
+
+</span> <span class="caret"></span>
+</a>
+<ul class="dropdown-menu">
+
+
+<li>
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="auth:disqus">Disqus</a>
+</li>
+<li>
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="auth:facebook">Facebook</a>
+</li>
+<li>
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="auth:twitter">Twitter</a>
+</li>
+<li>
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="auth:google">Google</a>
+</li>
+
+
+
+</ul>
+</li>
+<li class="nav-tab nav-tab--primary notification-menu unread" data-role="notification-menu"><a href="https://disqus.com/home/inbox/" class="notification-container" data-action="home" data-home-path="home/inbox/">
+<span class="notification-icon icon-comment" aria-hidden=""></span>
+<span class="notification-count" data-role="notification-count">1</span>
+</a>
+</li>
+</ul>
+</nav>
+</header>
+
+<section id="conversation" data-role="main" data-tracking-area="main">
+<div class="nav nav-secondary" data-tracking-area="secondary-nav">
+<ul>
+<li id="recommend-button" class="nav-tab nav-tab--secondary recommend dropdown">
+<div class="thread-likes"><a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="recommend" title="Recommend this discussion" class="dropdown-toggle ">
+<span class="icon-heart"></span>
+<span class="label label-default">Recommend</span>
+<span class="label label-recommended">Recommended</span>
+</a>
+<ul class="dropdown-menu dropdown-menu--coachmark">
+<li>
+<h2 class="coachmark__heading">Discussion Recommended!</h2>
+<p class="coachmark__description">Recommending means this is a discussion worth sharing. It gets shared to your followers' Disqus feeds, and gives the creator kudos!</p>
+<a href="https://disqus.com/home/?utm_source=disqus_embed&amp;utm_content=recommend_btn" class="btn btn-primary coachmark__button" target="_blank">
+ Find More Discussions 
+</a>
+</li>
+</ul>
+</div></li>
+<li id="thread-share-menu" class="nav-tab nav-tab--secondary dropdown share-menu hidden-sm"><a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" class="dropdown-toggle" data-toggle="dropdown" title="Share">
+<span class="icon-export"></span>
+<span class="label">Share</span>
+</a>
+<ul class="share-menu dropdown-menu">
+<li>
+<div class="share-menu__label">Share this discussion on</div>
+<ul>
+<li class="twitter">
+<a data-action="share:twitter" href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#">Twitter</a>
+</li>
+<li class="facebook">
+<a data-action="share:facebook" href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#">Facebook</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-role="post-sort" class="nav-tab nav-tab--secondary dropdown sorting pull-right">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" class="dropdown-toggle" data-toggle="dropdown">
+Sort by Best
+
+
+<span class="caret"></span>
+</a>
+<ul class="dropdown-menu pull-right">
+<li class="selected">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="sort" data-sort="popular">Best<i aria-hidden="true" class="icon-checkmark"></i></a>
+</li>
+
+<li>
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="sort" data-sort="desc">Newest<i aria-hidden="true" class="icon-checkmark"></i></a>
+</li>
+
+<li>
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="sort" data-sort="asc">Oldest<i aria-hidden="true" class="icon-checkmark"></i></a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div id="posts">
+<div id="form" class="textarea-wrapper--top-level"><form class="reply">
+<div class="postbox">
+<div role="alert"></div>
+<div class="avatar">
+<span class="user">
+<img data-role="user-avatar" src="./noavatar92.7b2fde640943965cc88df0cdee365907.png" alt="Avatar">
+</span>
+</div>
+
+<div class="textarea-wrapper" data-role="textarea" dir="auto"><div><span class="placeholder">Join the discussion…</span><div class="textarea" tabindex="0" role="textbox" aria-multiline="true" contenteditable="PLAINTEXT-ONLY" data-role="editable" aria-label="Join the discussion…" style="overflow: auto; word-wrap: break-word; max-height: 350px;"><p><br></p></div><div style="display: none;"><ul class="user-mention__list">
+<li class="header user-mention__header">
+<h5>in this conversation</h5>
+</li>
+</ul>
+</div></div>
+<div data-role="drag-drop-placeholder" class="media-drag-hover" style="display: none">
+<div class="drag-text">
+⬇ Drag and drop your images here to upload them.
+</div>
+</div>
+<div class="media-preview empty" data-role="media-preview"><ul data-role="media-progress-list"></ul>
+<ul data-role="media-rich-list"></ul>
+<div class="media-expanded empty" data-role="media-preview-expanded">
+<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-role="media-preview-expanded-image" alt="Media preview placeholder">
+</div>
+</div>
+<div class="edit-alert" role="postbox-alert"></div>
+<div class="post-actions">
+<ul class="wysiwyg">
+<li class="wysiwyg__item" data-role="media-uploader"><a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" tabindex="-1" data-action="attach" class="attach" title="Upload Images"><span>Attach</span></a>
+<input type="file" data-role="media-upload" tabindex="-1" accept="image/*">
+</li>
+</ul>
+</div>
+</div>
+
+<div data-role="login-form"><div><section class="auth-section logged-out">
+<div class="connect">
+<h6>Log in with</h6>
+<ul data-role="login-menu" class="services login-buttons">
+
+<li class="auth-disqus">
+<button type="button" data-action="auth:disqus" title="Disqus" class="connect__button"><i class="icon-disqus"></i></button>
+</li>
+<li class="auth-facebook">
+<button type="button" data-action="auth:facebook" title="Facebook" class="connect__button"><i class="icon-facebook-circle"></i></button>
+</li>
+<li class="auth-twitter">
+<button type="button" data-action="auth:twitter" title="Twitter" class="connect__button"><i class="icon-twitter-circle"></i></button>
+</li>
+<li class="auth-google">
+<button type="button" data-action="auth:google" title="Google" class="connect__button"><i class="icon-google-plus-circle"></i></button>
+</li>
+</ul>
+</div>
+<div class="guest">
+<h6 class="guest-form-title">
+<span class="register-text"> or sign up with Disqus </span>
+<span class="guest-text"> or pick a name </span>
+</h6>
+
+<div class="help-tooltip__wrapper help-icon">
+<div id="rules" class="tooltip show help-tooltip">
+<h3 class="help-tooltip__heading">Disqus is a discussion network</h3>
+<ul class="help-tooltip__list">
+<li><span>Disqus never moderates or censors. The rules on this community are its own.</span></li>
+<li><span>Your email is safe with us. It's only used for moderation and optional notifications.</span></li>
+<li><span>Don't be a jerk or do anything illegal. Everything is easier that way.</span></li>
+</ul>
+<p class="clearfix"><a href="https://docs.disqus.com/kb/terms-and-policies/" class="btn btn-small help-tooltip__button" target="_blank">Read full terms and conditions</a></p>
+</div>
+</div>
+
+<p class="input-wrapper">
+<input dir="auto" type="text" placeholder="Name" name="display_name" id="view46_display_name" maxlength="30" class="input--text">
+</p>
+
+<div class="guest-details " data-role="guest-details">
+<p class="input-wrapper">
+<input dir="auto" type="email" placeholder="Email" name="email" id="view46_email" class="input--text">
+</p>
+
+<p class="input-wrapper">
+<input dir="auto" type="password" class="register-text input--text" placeholder="Password" name="password" id="view46_password">
+</p>
+
+<div class="acceptance-wrapper register-text">
+By signing up, you agree to the Disqus <a target="_blank" href="https://help.disqus.com/customer/portal/articles/1753105-basic-rules-for-disqus-powered-profiles-and-discussions">Basic Rules</a>, <a target="_blank" href="https://help.disqus.com/customer/portal/articles/466260-terms-of-service">Terms of Service</a>, and <a target="_blank" href="https://help.disqus.com/customer/portal/articles/466259-privacy-policy">Privacy Policy</a>.
+</div>
+<div class="acceptance-wrapper guest-text">
+By posting, you agree to the Disqus <a target="_blank" href="https://help.disqus.com/customer/portal/articles/1753105-basic-rules-for-disqus-powered-profiles-and-discussions">Basic Rules</a>, <a target="_blank" href="https://help.disqus.com/customer/portal/articles/466260-terms-of-service">Terms of Service</a>, and <a target="_blank" href="https://help.disqus.com/customer/portal/articles/466259-privacy-policy">Privacy Policy</a>.
+</div>
+
+<div class="guest-checkbox">
+<label>
+<input type="checkbox" name="author-guest">
+I'd rather post as a guest
+</label>
+</div>
+
+<div class="proceed" data-role="submit-btn-container">
+<button type="submit" class="proceed__button btn submit" aria-label="Post"><span class="icon-proceed"></span><div class="spinner"></div></button>
+<button type="submit" class="proceed__button btn next" aria-label="Next"><span class="icon-proceed"></span><div class="spinner"></div></button>
+</div>
+</div>
+</div>
+</section>
+
+</div></div>
+</div>
+</form></div>
+
+<button class="alert alert--realtime" style="display: none" data-role="realtime-notification">
+</button>
+
+<div id="no-posts" style="display:none"></div>
+
+<ul id="post-list" class="post-list"><li class="post" id="post-2374312576"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/rizal_irawan/" class="user" data-action="profile" data-username="rizal_irawan">
+<img data-role="user-avatar" data-user="183925928" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/rizal_irawan/" data-action="profile" data-username="rizal_irawan" data-role="username">RizaL Irawan</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://coding4ever.net/blog/2014/03/21/entity-framework-part-2/#comment-2374312576" data-role="relative-time" class="time-ago" title="Monday, November 23, 2015 4:24 PM">a year ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>artikel yang menarik, tapi setelah saya coba implementasikan (saya mengunakan cara mapping Data Annotations) ada sedikit yang tidak sesuai, syntax [Table("NamaTableDatabase")] tidak ada (error/tidak ada keyword "Table") dan pertanyaan yang kedua, saya mengunakan table Gedung (ID,NamaGedung) dan membuat Class Gedung dengan property yang sama setelah jalankan muncul pesan error invalid Object name dbo.Gedungs. Setelah saya ganti nama table di database dari Gedung menjadi Gedungs tidak terjadi error, kode di program.cs sama persis seperti contoh cuma beda table saja. kira-kira yang salah apa ya ? mohon pencerahannya ^^</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/139lrb4" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2374312576">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-2375716219"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/coding4ever/" class="user" data-action="profile" data-username="coding4ever">
+<img data-role="user-avatar" data-user="106300738" src="./avatar92.jpg" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/coding4ever/" data-action="profile" data-username="coding4ever" data-role="username">Admin</a></span>
+<span class="badge moderator">Moderator</span>
+
+<span><a href="http://coding4ever.net/blog/2014/03/21/entity-framework-part-2/#comment-2374312576" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> RizaL Irawan</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://coding4ever.net/blog/2014/03/21/entity-framework-part-2/#comment-2375716219" data-role="relative-time" class="time-ago" title="Tuesday, November 24, 2015 10:46 AM">a year ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Untuk mapping menggunakan Data Annotations butuh namespace System.ComponentModel.DataAnnotations.</p><p>Trus untuk VSnya pake versi brp ?</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/13afud7" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2375716219">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-2377523515"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/rizal_irawan/" class="user" data-action="profile" data-username="rizal_irawan">
+<img data-role="user-avatar" data-user="183925928" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/rizal_irawan/" data-action="profile" data-username="rizal_irawan" data-role="username">RizaL Irawan</a></span>
+
+<span><a href="http://coding4ever.net/blog/2014/03/21/entity-framework-part-2/#comment-2375716219" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> Admin</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://coding4ever.net/blog/2014/03/21/entity-framework-part-2/#comment-2377523515" data-role="relative-time" class="time-ago" title="Wednesday, November 25, 2015 10:48 AM">a year ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>sudah saya kasih namespacenya, iya kayaknya gara2 versi visual studionya nya, saya pakai vs 2012 untuk key [Table("NamaTable")] memang tidak ada</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/13bikvv" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2377523515">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li></ul>
+
+</li></ul>
+
+</li><li class="post" id="post-2121880319"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/dwi_randy_herdinanto/" class="user" data-action="profile" data-username="dwi_randy_herdinanto">
+<img data-role="user-avatar" data-user="164553778" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/dwi_randy_herdinanto/" data-action="profile" data-username="dwi_randy_herdinanto" data-role="username">Dwi Randy Herdinanto</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://coding4ever.net/blog/2014/03/21/entity-framework-part-2/#comment-2121880319" data-role="relative-time" class="time-ago" title="Wednesday, July 8, 2015 1:16 AM">a year ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Om mau tanya kalo untuk MySQL bagaimana ya?</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/z3b9bz" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2121880319">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-2122737378"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/coding4ever/" class="user" data-action="profile" data-username="coding4ever">
+<img data-role="user-avatar" data-user="106300738" src="./avatar92.jpg" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/coding4ever/" data-action="profile" data-username="coding4ever" data-role="username">Admin</a></span>
+<span class="badge moderator">Moderator</span>
+
+<span><a href="http://coding4ever.net/blog/2014/03/21/entity-framework-part-2/#comment-2121880319" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> Dwi Randy Herdinanto</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://coding4ever.net/blog/2014/03/21/entity-framework-part-2/#comment-2122737378" data-role="relative-time" class="time-ago" title="Wednesday, July 8, 2015 10:00 AM">a year ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Sama aja, cuma untuk ADO.NET Providernya pake <a href="https://www.nuget.org/packages/MySql.Data.Entity/" rel="nofollow">MySql.Data.Entity</a>, untuk kode program tidak ada perubahan.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/z3tmn6" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2122737378">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-2133161863"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/dwi_randy_herdinanto/" class="user" data-action="profile" data-username="dwi_randy_herdinanto">
+<img data-role="user-avatar" data-user="164553778" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/dwi_randy_herdinanto/" data-action="profile" data-username="dwi_randy_herdinanto" data-role="username">Dwi Randy Herdinanto</a></span>
+
+<span><a href="http://coding4ever.net/blog/2014/03/21/entity-framework-part-2/#comment-2122737378" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> Admin</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://coding4ever.net/blog/2014/03/21/entity-framework-part-2/#comment-2133161863" data-role="relative-time" class="time-ago" title="Monday, July 13, 2015 7:07 PM">a year ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>oiya om mau tanya lagi ni :D<br>kenapa ya ketika pertama kali load data dari database memakan waktu yang cukup lama?</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/za1287" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2133161863">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-2133317478"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/coding4ever/" class="user" data-action="profile" data-username="coding4ever">
+<img data-role="user-avatar" data-user="106300738" src="./avatar92.jpg" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/coding4ever/" data-action="profile" data-username="coding4ever" data-role="username">Admin</a></span>
+<span class="badge moderator">Moderator</span>
+
+<span><a href="http://coding4ever.net/blog/2014/03/21/entity-framework-part-2/#comment-2133161863" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> Dwi Randy Herdinanto</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://coding4ever.net/blog/2014/03/21/entity-framework-part-2/#comment-2133317478" data-role="relative-time" class="time-ago" title="Monday, July 13, 2015 8:54 PM">a year ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Ya jelaslah om, engine entity framework itukan cukup komplek, jadi pada saat startup kan ada proses mengenerate objek berdasarkan konfigurasi mapping, jadi semakin banyak tabelnya ya semakin berart.</p><p>Tapi ada beberapa tip untuk meningkatkan kinerja entity framework misalnya menonaktifkan fitur Lazy Loading dan Dynamic Proxies.</p><p>Berarti uji coba EF ke MySQL berhasil nih ?</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/za4eau" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2133317478">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-2133680017"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/dwi_randy_herdinanto/" class="user" data-action="profile" data-username="dwi_randy_herdinanto">
+<img data-role="user-avatar" data-user="164553778" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/dwi_randy_herdinanto/" data-action="profile" data-username="dwi_randy_herdinanto" data-role="username">Dwi Randy Herdinanto</a></span>
+
+<span><a href="http://coding4ever.net/blog/2014/03/21/entity-framework-part-2/#comment-2133317478" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> Admin</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://coding4ever.net/blog/2014/03/21/entity-framework-part-2/#comment-2133680017" data-role="relative-time" class="time-ago" title="Monday, July 13, 2015 11:36 PM">a year ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Terima kasih om untuk penjelasannya :)<br>akan sy coba tip Lazy loading dan dynamic proxiesnya</p><p>iya om sudah berhasil untuk EF ke MySQLnya</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/zac61d" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2133680017">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-2134640754"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/coding4ever/" class="user" data-action="profile" data-username="coding4ever">
+<img data-role="user-avatar" data-user="106300738" src="./avatar92.jpg" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/coding4ever/" data-action="profile" data-username="coding4ever" data-role="username">Admin</a></span>
+<span class="badge moderator">Moderator</span>
+
+<span><a href="http://coding4ever.net/blog/2014/03/21/entity-framework-part-2/#comment-2133680017" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> Dwi Randy Herdinanto</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://coding4ever.net/blog/2014/03/21/entity-framework-part-2/#comment-2134640754" data-role="relative-time" class="time-ago" title="Tuesday, July 14, 2015 8:52 AM">a year ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Oke sippp :)</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/zawrci" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2134640754">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li></ul>
+
+</li></ul>
+
+</li></ul>
+
+</li></ul>
+
+</li></ul>
+
+</li><li class="post" id="post-1468008420"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/dimaslazuardyimani/" class="user" data-action="profile" data-username="dimaslazuardyimani">
+<img data-role="user-avatar" data-user="113111102" src="./avatar92(1).jpg" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/dimaslazuardyimani/" data-action="profile" data-username="dimaslazuardyimani" data-role="username">Dimas Lazuardy Imani</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://coding4ever.net/blog/2014/03/21/entity-framework-part-2/#comment-1468008420" data-role="relative-time" class="time-ago" title="Friday, July 4, 2014 3:57 PM">2 years ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Artikelnya bagus² gan, thx ... :)</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/oa0ijo" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:1468008420">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-1469002339"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/coding4ever/" class="user" data-action="profile" data-username="coding4ever">
+<img data-role="user-avatar" data-user="106300738" src="./avatar92.jpg" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/coding4ever/" data-action="profile" data-username="coding4ever" data-role="username">Admin</a></span>
+<span class="badge moderator">Moderator</span>
+
+<span><a href="http://coding4ever.net/blog/2014/03/21/entity-framework-part-2/#comment-1468008420" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> Dimas Lazuardy Imani</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://coding4ever.net/blog/2014/03/21/entity-framework-part-2/#comment-1469002339" data-role="relative-time" class="time-ago" title="Saturday, July 5, 2014 8:27 AM">2 years ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Sama-sama om :)</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer">
+<menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/oaltgj" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:1469002339">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li></ul>
+
+</li></ul>
+
+<div class="load-more" data-role="more" style="display:none">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" data-action="more-posts" class="btn load-more__button">Load more comments</a>
+</div>
+</div>
+
+</section>
+
+<div id="placement-bottom" data-tracking-area="discovery-south"><div class="post-list" style="height: auto; visibility: visible;"><div style="display: block; width: 100%;"><div id="discovery-main-c111" class="discovery-main">
+
+<section id="col-organic-c162" class="col-organic">
+<header class="discovery-col-header">
+<h2>Also on <strong>Coding4ever's Blog</strong>
+</h2>
+</header>
+<ul class="discovery-posts" data-role="discovery-posts"><li class="discovery-post post-0" id="discovery-link-organic-2694808085">
+<a href="http://disq.us/url?url=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2010%2F12%2F18%2Fproperty-builder%2F%3AIQnr981I7aRvWzJY-Hzsm6Dxo_Y&amp;imp=6trvfrh3r8geaa&amp;prev_imp=6trq0sb37ao3ci&amp;forum_id=3002742&amp;forum=coding4ever&amp;thread_id=2674854430&amp;thread=2694808085&amp;zone=thread&amp;area=bottom&amp;object_type=thread&amp;object_id=2694808085" class="publisher-anchor-color">
+
+<header class="discovery-post-header">
+<h3 title="Property Builder">
+<span data-role="discovery-thread-title" class="title line-truncate" data-line-truncate="2">
+Property Builder
+</span>
+</h3>
+
+<ul class="meta">
+<li class="comments">
+2 comments
+</li>
+<li class="time">2 years ago</li>
+</ul>
+</header>
+
+</a><a href="http://disq.us/url?url=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2010%2F12%2F18%2Fproperty-builder%2F%3AIQnr981I7aRvWzJY-Hzsm6Dxo_Y&amp;imp=6trvfrh3r8geaa&amp;prev_imp=6trq0sb37ao3ci&amp;forum_id=3002742&amp;forum=coding4ever&amp;thread_id=2674854430&amp;thread=2694808085&amp;zone=thread&amp;area=bottom&amp;object_type=thread&amp;object_id=2694808085" class="top-comment" data-role="discovery-top-comment">
+<img alt="Avatar" data-role="discovery-avatar">
+<p><span class="user" data-role="discovery-top-comment-author">Admin</span> — <span data-role="discovery-top-comment-snippet" class="line-truncate" data-line-truncate="3">Generator yg mana ?</span></p>
+</a>
+
+</li>
+<li class="discovery-post post-1" id="discovery-link-organic-2694805354">
+<a href="http://disq.us/url?url=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2010%2F12%2F01%2Fcoding4ever-advanced-textbox%2F%3ALFTTJaexCLBUunWrgvKPYmoTSUQ&amp;imp=6trvfrh3r8geaa&amp;prev_imp=6trq0sb37ao3ci&amp;forum_id=3002742&amp;forum=coding4ever&amp;thread_id=2674854430&amp;thread=2694805354&amp;zone=thread&amp;area=bottom&amp;object_type=thread&amp;object_id=2694805354" class="publisher-anchor-color">
+
+<header class="discovery-post-header">
+<h3 title="Coding4Ever Advanced TextBox">
+<span data-role="discovery-thread-title" class="title line-truncate" data-line-truncate="2">
+Coding4Ever Advanced TextBox
+</span>
+</h3>
+
+<ul class="meta">
+<li class="comments">
+13 comments
+</li>
+<li class="time">2 years ago</li>
+</ul>
+</header>
+
+</a><a href="http://disq.us/url?url=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2010%2F12%2F01%2Fcoding4ever-advanced-textbox%2F%3ALFTTJaexCLBUunWrgvKPYmoTSUQ&amp;imp=6trvfrh3r8geaa&amp;prev_imp=6trq0sb37ao3ci&amp;forum_id=3002742&amp;forum=coding4ever&amp;thread_id=2674854430&amp;thread=2694805354&amp;zone=thread&amp;area=bottom&amp;object_type=thread&amp;object_id=2694805354" class="top-comment" data-role="discovery-top-comment">
+<img alt="Avatar" data-role="discovery-avatar">
+<p><span class="user" data-role="discovery-top-comment-author">Wahyu Purba Anggara</span> — <span data-role="discovery-top-comment-snippet" class="line-truncate" data-line-truncate="3">udah teratasi om Terimakasih</span></p>
+</a>
+
+</li>
+<li class="discovery-post post-2" id="discovery-link-organic-3196763392">
+<a href="http://disq.us/url?url=http%3A%2F%2Fcoding4ever.net%2Faplikasi-gratis%2Findex.html%3AMfPTqCDwVHoTgx4_A5UhFYNSclY&amp;imp=6trvfrh3r8geaa&amp;prev_imp=6trq0sb37ao3ci&amp;forum_id=3002742&amp;forum=coding4ever&amp;thread_id=2674854430&amp;thread=3196763392&amp;zone=thread&amp;area=bottom&amp;object_type=thread&amp;object_id=3196763392" class="publisher-anchor-color">
+
+<header class="discovery-post-header">
+<h3 title="Aplikasi Gratis">
+<span data-role="discovery-thread-title" class="title line-truncate" data-line-truncate="2">
+Aplikasi Gratis
+</span>
+</h3>
+
+<ul class="meta">
+<li class="comments">
+12 comments
+</li>
+<li class="time">2 years ago</li>
+</ul>
+</header>
+
+</a><a href="http://disq.us/url?url=http%3A%2F%2Fcoding4ever.net%2Faplikasi-gratis%2Findex.html%3AMfPTqCDwVHoTgx4_A5UhFYNSclY&amp;imp=6trvfrh3r8geaa&amp;prev_imp=6trq0sb37ao3ci&amp;forum_id=3002742&amp;forum=coding4ever&amp;thread_id=2674854430&amp;thread=3196763392&amp;zone=thread&amp;area=bottom&amp;object_type=thread&amp;object_id=3196763392" class="top-comment" data-role="discovery-top-comment">
+<img alt="Avatar" data-role="discovery-avatar">
+<p><span class="user" data-role="discovery-top-comment-author">Admin</span> — <span data-role="discovery-top-comment-snippet" class="line-truncate" data-line-truncate="3">:-)</span></p>
+</a>
+
+</li>
+<li class="discovery-post post-3" id="discovery-link-organic-3196748829">
+<a href="http://disq.us/url?url=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F11%2F06%2Fkr-pulsa-elektrik%2F%3AMdiKW0ON6Nx8YqD7PhOoimEydPk&amp;imp=6trvfrh3r8geaa&amp;prev_imp=6trq0sb37ao3ci&amp;forum_id=3002742&amp;forum=coding4ever&amp;thread_id=2674854430&amp;thread=3196748829&amp;zone=thread&amp;area=bottom&amp;object_type=thread&amp;object_id=3196748829" class="publisher-anchor-color">
+
+<header class="discovery-post-header">
+<h3 title="KR Pulsa Elektrik">
+<span data-role="discovery-thread-title" class="title line-truncate" data-line-truncate="2">
+KR Pulsa Elektrik
+</span>
+</h3>
+
+<ul class="meta">
+<li class="comments">
+27 comments
+</li>
+<li class="time">2 years ago</li>
+</ul>
+</header>
+
+</a><a href="http://disq.us/url?url=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F11%2F06%2Fkr-pulsa-elektrik%2F%3AMdiKW0ON6Nx8YqD7PhOoimEydPk&amp;imp=6trvfrh3r8geaa&amp;prev_imp=6trq0sb37ao3ci&amp;forum_id=3002742&amp;forum=coding4ever&amp;thread_id=2674854430&amp;thread=3196748829&amp;zone=thread&amp;area=bottom&amp;object_type=thread&amp;object_id=3196748829" class="top-comment" data-role="discovery-top-comment">
+<img alt="Avatar" data-role="discovery-avatar">
+<p><span class="user" data-role="discovery-top-comment-author">Admin</span> — <span data-role="discovery-top-comment-snippet" class="line-truncate" data-line-truncate="3"> Coba diisi dulu om, agen idnya. Saya ada rencana untuk menambahkan filter sms masuk berdasarkan sms sendernya di versi berikutnya, …</span></p>
+</a>
+
+</li>
+</ul>
+</section>
+
+</div>
+</div></div></div>
+
+<div id="footer" data-tracking-area="footer" class="disqus-footer__wrapper">
+<ul class="disqus-footer">
+<li class="disqus-footer__logo"><a href="https://disqus.com/" rel="nofollow" title="Powered by Disqus" class="disqus-footer__link">Powered by Disqus</a></li>
+<li id="thread-subscribe-button" class="email disqus-footer__item"> 
+<div class="default">
+<a href="http://disqus.com/embed/comments/?base=default&amp;version=e04dc5565ac38ab1b60d822e9074b9ab&amp;f=coding4ever&amp;t_i=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_u=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F21%2Fentity-framework-part-2%2F&amp;t_d=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;t_t=Entity%20Framework%20Part%202%20-%20Coding4ever%E2%80%99s%20Blog&amp;s_o=default#" rel="nofollow" data-action="subscribe" title="Subscribe and get email updates from this discussion" class="disqus-footer__link"><i aria-hidden="true" class="icon icon-mail"></i><span class="clip">Subscribe</span> <i aria-hidden="true" class="icon icon-checkmark"></i></a>
+</div>
+<div class="form">
+<div class="input-wrapper"><input id="thread-subscribe-email" type="email" placeholder="yourname@email.com" class="disqus-footer__input input--text"></div>
+</div>
+</li>
+<li class="install disqus-footer__item">
+<a href="https://publishers.disqus.com/engage?utm_source=coding4ever&amp;utm_medium=Disqus-Footer" rel="nofollow" target="_blank" class="disqus-footer__link">
+<i aria-hidden="true" class="icon icon-disqus"></i>
+<span class="clip hidden-sm">Add Disqus to your site</span>
+<span class="clip visible-sm hidden-xs">Add Disqus</span>
+<span class="clip visible-xs">Add</span>
+</a>
+</li>
+<li class="privacy disqus-footer__item">
+<a href="https://help.disqus.com/customer/portal/articles/1657951?utm_source=disqus&amp;utm_medium=embed-footer&amp;utm_content=privacy-btn" rel="nofollow" target="_blank" class="disqus-footer__link">
+<i aria-hidden="true" class="icon icon-lock"></i>
+<span class="clip">Privacy</span>
+</a>
+</li>
+</ul>
+</div>
+</div></body></html>

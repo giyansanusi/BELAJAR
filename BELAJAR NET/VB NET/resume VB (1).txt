@@ -1,0 +1,35 @@
+RESUME VB 
+
+dim kependekan dari dimension, di buat untuk 
+deklarasi variabel di VB untuk tipe data 
+yang tidak terdefinisi(data nya bisa apa aja
+, sama kayak var di javascript)
+
+ada beberapa tipe tag di aspx
+<%  %> konsep nya kurang lebih sama aja 
+kayak razor yang pake @
+
+
+jadi kondisi disini sekarang pak kami ada di 
+divisi support, untuk divisi support sendiri 
+lebih condong ke penggunaan tools yang telah disediakan
+untuk troubelshoot dan maintenance permasalhan 
+dari user. Untuk keperluan teknis di divisi support
+tidak terlalu banyak digunakan kecuali keterampilan untuk debug
+apabila permasalahan yang ada memang di haruskan untuk sampai membuka
+kodingan. Pada saat debug yang banyak digunakan yaitu
+membedah SP di MS SQL, pengetahuan dasar C#, VB, serta ASP dan javascriptnya.
+untuk kendala ada di dua sisi pak, yang pertama pengambilan keputusan apa yang harus 
+dilakukan  dari permasalahan yang di beri user. varian masalah nya berbeda beda meliputi workflow, service, dan web nya
+meskipun untuk workflow dan sebagian web serta service sudah dapat di cover oleh tools yang disediakan tapi ada beberapa permasalahan 
+yang memang harus langsung terjun ke dalam kodingan, disini keterampilan untuk debug lebih dibutuhkan.
+
+
+yang harus di cari perbedaan aspx ashx dan ascx
+code behind apa itu
+
+
+memasukan no token selalu kembali ke awal menu dan tidak dapat mengakses BPM mobile memalui HP 
+
+
+ 

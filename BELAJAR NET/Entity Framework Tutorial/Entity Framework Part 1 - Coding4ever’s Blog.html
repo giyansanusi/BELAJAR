@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)http://coding4ever.net/blog/2014/03/18/entity-framework-part-1/ -->
+<html class="js video maskImage placeholder" lang="en"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Entity Framework Part 1 - Coding4ever’s Blog</title>
+  <meta name="author" content="Admin">
+
+  
+  <meta name="description" content="Intro ORM Sebelum kita membahas apa itu Entity Framework, kita akan singgung sedikit mengenai ORM (Object Relational Mapping). ORM  adalah   …">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+
+  
+  <link rel="canonical" href="http://coding4ever.net/blog/2014/03/18/entity-framework-part-1">
+  <link href="http://coding4ever.net/favicon.png" rel="icon">
+  <link href="./Entity Framework Part 1 - Coding4ever’s Blog_files/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="http://coding4ever.net/atom.xml" rel="alternate" title="Coding4ever&#39;s Blog" type="application/atom+xml">
+  <script type="text/javascript" src="./Entity Framework Part 1 - Coding4ever’s Blog_files/jXHR.js.download"></script><script id="facebook-jssdk" async="" src="./Entity Framework Part 1 - Coding4ever’s Blog_files/all.js.download"></script><script type="text/javascript" async="" src="./Entity Framework Part 1 - Coding4ever’s Blog_files/ga.js.download"></script><script src="./Entity Framework Part 1 - Coding4ever’s Blog_files/modernizr-2.0.js.download"></script>
+  <script src="./Entity Framework Part 1 - Coding4ever’s Blog_files/jquery.min.js.download"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="./Entity Framework Part 1 - Coding4ever’s Blog_files/octopress.js.download" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="./Entity Framework Part 1 - Coding4ever’s Blog_files/css" rel="stylesheet" type="text/css">
+<link href="./Entity Framework Part 1 - Coding4ever’s Blog_files/css(1)" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-50866618-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+<script type="text/javascript" async="" src="./Entity Framework Part 1 - Coding4ever’s Blog_files/embed.js.download"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style></head>
+
+<body>
+  <header role="banner"><hgroup>
+  <h1><a href="http://coding4ever.net/">Coding4ever’s Blog</a></h1>
+  
+    <h2>Just coding… coding… and coding… because coding should be fun :)</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://coding4ever.net/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:coding4ever.net">
+    <input class="search" type="text" name="q" results="0" placeholder="Search">
+  </fieldset>
+</form>
+  
+<fieldset class="mobile-nav"><select><option value="">Navigate…</option><option value="http://coding4ever.net/">» Home</option><option value="http://coding4ever.net/blog/archives">» Archives</option><option value="http://coding4ever.net/gudang-software">» Gudang Software</option><option value="http://coding4ever.net/source-code">» Source Code</option><option value="http://coding4ever.net/aplikasi-gratis">» Aplikasi Gratis</option><option value="http://coding4ever.net/atom.xml">» RSS</option></select></fieldset><ul class="main-navigation">
+  <li><a href="http://coding4ever.net/">Home</a></li>
+  <li><a href="http://coding4ever.net/blog/archives">Archives</a></li>
+  <li><a href="http://coding4ever.net/gudang-software">Gudang Software</a></li>
+  <li><a href="http://coding4ever.net/source-code">Source Code</a></li>  
+  <li><a href="http://coding4ever.net/aplikasi-gratis">Aplikasi Gratis</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Entity Framework Part 1</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class="entry-date" datetime="2014-03-18T10:05:13+07:00"><span class="date"><span class="date-month">Mar</span> <span class="date-day">18</span><span class="date-suffix">th</span>, <span class="date-year">2014</span></span> <span class="time">10:05 am</span></time>
+        
+           | <a href="http://coding4ever.net/blog/2014/03/18/entity-framework-part-1/#disqus_thread" data-disqus-identifier="http://coding4ever.net">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><img class="left" src="./Entity Framework Part 1 - Coding4ever’s Blog_files/entity_image.png" width="120" height="100"></p>
+
+<p><strong>Intro ORM</strong></p>
+
+<p>Sebelum kita membahas apa itu <a href="http://msdn.microsoft.com/en-us/data/aa937723">Entity Framework</a>, kita akan singgung sedikit mengenai <a href="http://en.wikipedia.org/wiki/Object-relational_mapping">ORM</a> (Object Relational Mapping).</p>
+
+<p>ORM &nbsp;adalah &nbsp;framework &nbsp;yang &nbsp;memetakan &nbsp;tabel &nbsp;pada &nbsp;database &nbsp;relasional ke objek &nbsp;dengan menggunakan &nbsp;informasi &nbsp;pada metadata. &nbsp;Metadata &nbsp;dapat &nbsp;berupa &nbsp;file &nbsp;XML &nbsp;atau custom atribute pada &nbsp;entity class.</p>
+
+<p>Saat ini sudah banyak pilihan ORM yang dapat meningkatkan &nbsp;produktivitas kita sebagai seorang developer. Ketika kita membangun sebuah aplikasi database &nbsp;dengan menggunakan OOP, &nbsp;maka harus &nbsp;dibuatkan &nbsp;sebuah &nbsp;persisten &nbsp;objek &nbsp;yang memodelkan objek dari database seperti tabel, &nbsp;view , relationship dan objek database lainnya.</p>
+
+<!-- more -->
+
+
+<p><strong>Persisten &nbsp;objek (Object Persistence)</strong></p>
+
+<p>Hampir semua aplikasi membutuhkan persistensi data. &nbsp;Jika tidak, ketika aliran listrik dimatikan maka data tersebut akan hilang.</p>
+
+<p>Ketika akan menyimpan data secara permanen, database relasional adalah pilihan terbaik, sedangkan ketika harus bekerja dengan data yang ada di memori, objek adalah cara yang terbaik.</p>
+
+<p>Fitur seperti pewarisan, enkapsulasi dan fitur OOP lainnya memungkinkan penulisan kode yang lebih baik dan menyederhankan pengembangan aplikasi.</p>
+
+<p>Ketika &nbsp;memodelkan &nbsp;persisten &nbsp;objek, &nbsp;makin besar aplikasi yang &nbsp;kita buat, maka makin rumit pemodelan yang dilakukan. Pemodelan dengan “tangan &nbsp;kosong” &nbsp;bukanlah &nbsp;ide &nbsp;yang &nbsp;baik. Selain &nbsp;banyak &nbsp;waktu &nbsp;yang &nbsp;terbuang &nbsp;karena &nbsp;banyak perkerjaan yang di lakukan berulang-ulang, bisa jadi banyak kesalahan yang tidak bisa dihindari.</p>
+
+<p>Salah satu solusi yang digunakan untuk mengatasi pemodelan dengan “tangan &nbsp;kosong” &nbsp;ini adalah dengan menggunakan ORM.</p>
+
+<p>ORM mempunyai kemampuan untuk mengenerate secara otomatis persisten &nbsp;objek berdasarkan schema dari database, konfigurasi file &nbsp;XML &nbsp;atau &nbsp;custom atribute pada &nbsp;entity class.</p>
+
+<p>Pendekatan ORM &nbsp;bisa jadi lebih efektif dan produktif, tetapi tetap saja ada kekurangannya yaitu eksekusi &nbsp;program &nbsp;cenderung lebih &nbsp;lambat &nbsp;daripada &nbsp;tanpa &nbsp;menggunakan &nbsp;ORM. Hal ini disebabkan adanya &nbsp;proses &nbsp;mapping &nbsp;terlebih dahulu &nbsp;terhadap &nbsp;tabel di &nbsp;database. Proses &nbsp;ini mengubah &nbsp;”record/tupel” menjadi &nbsp;objek &nbsp;atau &nbsp;objek &nbsp;collection. Namun &nbsp;dengan perkembangan kecepatan processor dan kapasitas memory saat ini kekurangan ini dapat diatasi.</p>
+
+<p>Berikut beberapa alasan mengapa menggunakan ORM :</p>
+
+<ol>
+<li><p>Productivity : Mempermudah penulisan kode pengaksesan data (DAO/Access Object)</p></li>
+<li><p>Maintainability&nbsp; :&nbsp; Kode&nbsp; lebih&nbsp; mudah&nbsp; di&nbsp; maintenance,&nbsp; karena&nbsp; tidak&nbsp; perlu&nbsp; lagi&nbsp; menulis perintah SQL bersama-sama dengan kode utama, bahkan tidak perlu menuliskan SQL sekali.</p></li>
+<li><p>Performance : Kode lebih efesien sehingga bisa dioptimasi lebih lanjut</p></li>
+<li><p>Vendor Independence&nbsp; :&nbsp; Tidak tergantung penyedia DBMS. Jika terjadi perubahan data cukup diubah konfigurasi koneksi saja</p></li>
+<li><p>Mengatasi&nbsp; Paradigm&nbsp; “impedance mismatch”&nbsp; :&nbsp; Penyimpanan&nbsp; data&nbsp; dalam&nbsp; RDBMS&nbsp; dan&nbsp; objek&nbsp; sama&nbsp; sekali berbeda. ORM menjadi layer perantara RDBMS dengan pemrograman berbasis objek.</p></li>
+</ol>
+
+
+<p><strong>Entity Framework</strong></p>
+
+<p><a href="http://msdn.microsoft.com/en-us/data/aa937723">Entity Framework</a> adalah salah satu ORM yang dibuat dan direkomendasikan Microsoft dalam pengembangan aplikasi.</p>
+
+<p>Kita akan membahas lebih lanjut tentang <a href="http://msdn.microsoft.com/en-us/data/aa937723">Entity Framewor</a>k pada postingan berikutnya, insyaAlloh :)</p>
+
+<p>Dan sebagai penutup postingan kali ini, saya akan menampilkan cuplikan source code untuk mengakses database baik menggunakan library&nbsp;ADO.NET secara langsung dan menggunakan ORM Entity Framework.</p>
+
+<p>Untuk database saya menggunakan SQL Server Express 2008 R2.</p>
+
+<p><a href="./Entity Framework Part 1 - Coding4ever’s Blog_files/11.jpg"><img src="./Entity Framework Part 1 - Coding4ever’s Blog_files/11.jpg" alt="1"></a></p>
+
+<p><strong>1. Menggunakan library ADO.NET secara langsung</strong></p>
+
+<figure class="code"><div class="highlight"><table><tbody><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+<span class="line-number">19</span>
+<span class="line-number">20</span>
+<span class="line-number">21</span>
+<span class="line-number">22</span>
+<span class="line-number">23</span>
+<span class="line-number">24</span>
+</pre></td><td class="code"><pre><code class="c#"><span class="line"><span class="kt">var</span> <span class="n">strConn</span> <span class="p">=</span> <span class="s">@"Data Source=.\sqlexpress2008;Initial Catalog=Retail;Integrated Security=True"</span><span class="p">;</span>
+</span><span class="line">
+</span><span class="line"><span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">conn</span> <span class="p">=</span> <span class="k">new</span> <span class="n">SqlConnection</span><span class="p">(</span><span class="n">strConn</span><span class="p">))</span>
+</span><span class="line"><span class="p">{</span>
+</span><span class="line">    <span class="n">conn</span><span class="p">.</span><span class="n">Open</span><span class="p">();</span>
+</span><span class="line">
+</span><span class="line">    <span class="kt">var</span> <span class="n">sql</span> <span class="p">=</span> <span class="s">@"SELECT NamaSupplier, Jalan</span>
+</span><span class="line"><span class="s">                FROM Supplier"</span><span class="p">;</span>
+</span><span class="line">
+</span><span class="line">    <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">cmd</span> <span class="p">=</span> <span class="k">new</span> <span class="n">SqlCommand</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="n">conn</span><span class="p">))</span>
+</span><span class="line">    <span class="p">{</span>
+</span><span class="line">        <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">dtr</span> <span class="p">=</span> <span class="n">cmd</span><span class="p">.</span><span class="n">ExecuteReader</span><span class="p">())</span>
+</span><span class="line">        <span class="p">{</span>
+</span><span class="line">            <span class="kt">var</span> <span class="n">noUrut</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
+</span><span class="line">
+</span><span class="line">            <span class="k">while</span> <span class="p">(</span><span class="n">dtr</span><span class="p">.</span><span class="n">Read</span><span class="p">())</span>
+</span><span class="line">            <span class="p">{</span>
+</span><span class="line">                <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"{0}. {1}, {2}"</span><span class="p">,</span> <span class="n">noUrut</span><span class="p">,</span> <span class="n">dtr</span><span class="p">[</span><span class="s">"NamaSupplier"</span><span class="p">],</span> <span class="n">dtr</span><span class="p">.</span><span class="n">GetString</span><span class="p">(</span><span class="m">1</span><span class="p">));</span>
+</span><span class="line">
+</span><span class="line">                <span class="n">noUrut</span><span class="p">++;</span>
+</span><span class="line">            <span class="p">}</span>
+</span><span class="line">        <span class="p">}</span>
+</span><span class="line">    <span class="p">}</span>
+</span><span class="line"><span class="p">}</span>
+</span></code></pre></td></tr></tbody></table></div></figure>
+
+
+<p>Penulisan kode seperti di atas, dengan menggunakan objek DataReader untuk menampung hasil SELECT, mirip dengan programmer VB classic yang menggunakan objek Recordset untuk menampung data, di mana kita masih berhubungan dengan baris dan kolom.</p>
+
+<p>Makanya ketika kita ingin menampilkan nama supplier kita harus menyebutkan fieldnya yaitu “NamaSupplier” atau dengan menyebutkan indexnya.</p>
+
+<p>Penulisan nama field “NamaSupplier”, masih berbasis teks sehingga IDE Visual Studio yang canggih pun tidak bisa berbuat banyak untuk membantu kita mengingat nama field apa saja yang tersedia untuk tabel Supplier berikut tipe datanya.</p>
+
+<p><strong>2. Menggunakan ORM Entity Framework</strong></p>
+
+<figure class="code"><div class="highlight"><table><tbody><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+</pre></td><td class="code"><pre><code class="c#"><span class="line"><span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">db</span> <span class="p">=</span> <span class="k">new</span> <span class="n">RetailContext</span><span class="p">())</span>
+</span><span class="line"><span class="p">{</span>
+</span><span class="line">    <span class="kt">var</span> <span class="n">noUrut</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
+</span><span class="line">
+</span><span class="line">    <span class="kt">var</span> <span class="n">daftarSupplier</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">Suppliers</span><span class="p">.</span><span class="n">ToList</span><span class="p">();</span>
+</span><span class="line">    <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">supplier</span> <span class="k">in</span> <span class="n">daftarSupplier</span><span class="p">)</span>
+</span><span class="line">    <span class="p">{</span>
+</span><span class="line">        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"{0}. {1}, {2}"</span><span class="p">,</span> <span class="n">noUrut</span><span class="p">,</span> <span class="n">supplier</span><span class="p">.</span><span class="n">NamaSupplier</span><span class="p">,</span> <span class="n">supplier</span><span class="p">.</span><span class="n">Jalan</span><span class="p">);</span>
+</span><span class="line">
+</span><span class="line">        <span class="n">noUrut</span><span class="p">++;</span>
+</span><span class="line">    <span class="p">}</span>
+</span><span class="line"><span class="p">}</span>
+</span></code></pre></td></tr></tbody></table></div></figure>
+
+
+<p>Pendekatan yang kedua ini kita sudah tidak lagi berhubungan dengan baris dan kolom tetapi langsung berhubungan dengan objek dari masing-masing class entity/model. Sehingga ketika kita menuliskan objek supplier kemudian diikuti dengan karakter titik (.), IDE Visual Studio bisa membantu kita dengan fasilitas IntelliSensenya untuk menampilkan daftar property apa saja yang tersedia.</p>
+
+<p><a href="./Entity Framework Part 1 - Coding4ever’s Blog_files/113.png"><img src="./Entity Framework Part 1 - Coding4ever’s Blog_files/113.png" alt="1"></a></p>
+
+<p>Sehingga aktivitas mengingat nama field berikut tipe datanya sudah tidak ada lagi disini :D , bahkan kita tidak perlu menuliskan secara manual perintah SQL yang digunakan untuk menampilkan data Supplier, semuanya semua pekerjaan ini sudah diambil alih oleh Entity Framework.</p>
+
+<p>Dari sisi kecepatan, jelas menggunakan library ADO.NET secara langsung adalah pemenangnya, tetapi dari sisi kemudahan penulisan kode dan pengembangan aplikasi, Anda dan Saya pasti sepakat bahwa menggunakan ORM adalah pemenangnya :)</p>
+
+<p>Selamat <a href="https://github.com/k4m4r82/EntityFramework1">MENCOBA</a> :)</p>
+
+<p>Referensi :</p>
+
+<ol>
+<li><p><a href="http://it-ebooks.info/book/613/">Programming Entity Framework, 2nd Edition</a></p></li>
+<li><p><a href="http://it-ebooks.info/book/424/">Programming Entity Framework: Code First</a></p></li>
+<li><p><a href="http://it-ebooks.info/book/667/">Programming Entity Framework: DbContext</a></p></li>
+<li><p><a href="http://it-ebooks.info/book/1619/">Entity Framework 4 in Action</a></p></li>
+<li><p><a href="http://geeks.netindonesia.net/files/folders/ebook/entry63274.aspx">NET Enterprise Application Programming</a></p></li>
+</ol>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Admin</span></span>
+
+      
+
+
+
+
+<time class="entry-date" datetime="2014-03-18T10:05:13+07:00"><span class="date"><span class="date-month">Mar</span> <span class="date-day">18</span><span class="date-suffix">th</span>, <span class="date-year">2014</span></span> <span class="time">10:05 am</span></time>
+      
+
+<span class="categories">
+  
+    <a class="category" href="http://coding4ever.net/blog/categories/entity-framework/">entity framework</a>, <a class="category" href="http://coding4ever.net/blog/categories/visual-c-number/">visual c#</a>
+  
+</span>
+
+
+    </p>
+    
+      <h2>Tentang Penulis</h2>
+<p class="meta">
+<img class="left" src="./Entity Framework Part 1 - Coding4ever’s Blog_files/avatar-blog-mini.png">Software developer yang fokus mengembangkan aplikasi di atas platform .NET (Desktop, ASP.NET MVC, Web Service) dan Android. Senang mempelajari teknologi baru terutama di bidang OOP, Design Pattern, ORM dan Database.
+<br>
+Saat ini bekerja sebagai staf IT di salah satu PTS di Yogyakarta sebagai senior software developer. Di waktu luang insya Alloh akan terus berbagi pengalaman di blog <a href="http://coding4ever.net/" target="_blank">ini</a> :)
+</p>
+<div class="sharing">
+  
+  
+  
+    <div class="fb-like fb_iframe_widget" data-send="true" data-width="450" data-show-faces="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=212934732101925&amp;container_width=789&amp;href=http%3A%2F%2Fcoding4ever.net%2Fblog%2F2014%2F03%2F18%2Fentity-framework-part-1%2F&amp;locale=en_US&amp;sdk=joey&amp;send=true&amp;show_faces=false&amp;width=450"><span style="vertical-align: bottom; width: 450px; height: 20px;"><iframe name="f33a4f5a1513a1c" width="450px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" src="./Entity Framework Part 1 - Coding4ever’s Blog_files/like.html" style="border: none; visibility: visible; width: 450px; height: 20px;" class=""></iframe></span></div>
+  
+</div>
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="http://coding4ever.net/blog/2014/03/13/membuat-paket-nuget/" title="Previous Post: Membuat Paket NuGet">« Membuat Paket NuGet</a>
+      
+      
+        <a class="basic-alignment right" href="http://coding4ever.net/blog/2014/03/21/entity-framework-part-2/" title="Next Post: Entity Framework Part 2">Entity Framework Part 2 »</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><iframe id="dsq-app1" name="dsq-app1" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./Entity Framework Part 1 - Coding4ever’s Blog_files/saved_resource.html" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 1246px !important;" horizontalscrolling="no" verticalscrolling="no"></iframe></div>
+  </section>
+
+</div>
+
+<aside class="sidebar thirds">
+  
+    <section class="first odd">
+  <h1>Admin</h1>
+  
+  <a href="http://www.facebook.com/abu.anas.1232" title="Admin" target="_blank"><img src="./Entity Framework Part 1 - Coding4ever’s Blog_files/avatar-blog.png" border="0" alt="Admin"></a><br>
+  
+  <p>Software developer yang berasal dari Riau, tepatnya di <a href="http://id.wikipedia.org/wiki/Kabupaten_Indragiri_Hilir" title="Negeri Seribu Parit" target="_blank">Negeri Seribu Parit</a> dan saat ini berdomisili di Yogyakarta.</p>
+  
+  <p>Pernah mengajar di salah satu perguruan tinggi swasta (PTS) di Yogyakarta.<br>
+     Saat ini bekerja sebagai staf IT di PTS yang sama sebagai senior software developer.</p>
+  
+  <p>Fokus mengembangkan aplikasi di atas platform .NET (Desktop, ASP.NET MVC, Web Service) dan Android. Di waktu luang insya Alloh akan terus berbagi pengalaman di blog <a href="http://coding4ever.net/" target="_blank">ini</a>.</p>    
+</section><section class="even">
+  <h1>Info</h1>
+    <ul>		
+		<li>			
+			<a href="https://www.facebook.com/Asytar2013" title="Asytar Collection" target="_blank">Asytar Collection</a>
+		</li>				
+	</ul>
+	
+  <h1>Contacts</h1>
+    <ul>		
+		<li>			
+			<a href="mailto:coding4ever.net@gmail.com" title="GMail" target="_blank"><img src="./Entity Framework Part 1 - Coding4ever’s Blog_files/gmail-small2.png" border="0" alt="GMail"></a>
+		</li>		
+		<li>			
+			<a href="https://github.com/k4m4r82?tab=repositories" title="GitHub" target="_blank"><img src="./Entity Framework Part 1 - Coding4ever’s Blog_files/github-small2.png" border="0" alt="GitHub"></a>
+		</li>
+		<li>
+			<a href="http://www.facebook.com/abu.anas.1232" title="Facebook" target="_blank"><img src="./Entity Framework Part 1 - Coding4ever’s Blog_files/fb-small2.png" border="0" alt="Facebook"></a>
+		</li>				
+		<li>
+			<img src="./Entity Framework Part 1 - Coding4ever’s Blog_files/bbm-pin2.png" border="0" alt="BBM PIN">
+		</li>
+	</ul>
+</section><section class="odd">
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="http://coding4ever.net/blog/2016/10/01/membangun-server-ci-continuous-integration-di-windows-untuk-platform-net-menggunakan-jenkins-bagian-number-2/">Membangun Server CI (Continuous Integration) Di Windows Untuk Platform .NET Menggunakan Jenkins Bagian #2</a>
+      </li>
+    
+      <li class="post">
+        <a href="http://coding4ever.net/blog/2016/09/29/membangun-server-ci-continuous-integration-di-windows-untuk-platform-net-menggunakan-jenkins-bagian-number-1/">Membangun Server CI (Continuous Integration) Di Windows Untuk Platform .NET Menggunakan Jenkins Bagian #1</a>
+      </li>
+    
+      <li class="post">
+        <a href="http://coding4ever.net/blog/2016/09/26/persiapan-membangun-server-ci-continuous-integration-di-windows-untuk-platform-net-bagian-number-2/">Persiapan Membangun Server CI (Continuous Integration) Di Windows Untuk Platform .NET Bagian #2</a>
+      </li>
+    
+      <li class="post">
+        <a href="http://coding4ever.net/blog/2016/09/24/persiapan-membangun-server-ci-continuous-integration-pada-windows-untuk-platform-net-bagian-number-1/">Persiapan Membangun Server CI (Continuous Integration) Di Windows Untuk Platform .NET Bagian #1</a>
+      </li>
+    
+      <li class="post">
+        <a href="http://coding4ever.net/blog/2016/08/12/integration-testing-menggunakan-nunit-dan-ndbunit/">Integration Testing Menggunakan NUnit Dan NDbUnit</a>
+      </li>
+    
+      <li class="post">
+        <a href="http://coding4ever.net/blog/2016/07/28/integration-testing-menggunakan-nunit/">Integration Testing Menggunakan NUnit</a>
+      </li>
+    
+      <li class="post">
+        <a href="http://coding4ever.net/blog/2016/07/22/coverage-testing-menggunakan-nunit-opencover-reportgenerator/">Coverage Testing Menggunakan NUnit, OpenCover Dan ReportGenerator</a>
+      </li>
+    
+      <li class="post">
+        <a href="http://coding4ever.net/blog/2016/07/20/unit-testing-menggunakan-nunit/">Unit Testing Menggunakan NUnit</a>
+      </li>
+    
+      <li class="post">
+        <a href="http://coding4ever.net/blog/2016/06/28/repository-pattern-bagian-number-2/">Repository Pattern Bagian #2</a>
+      </li>
+    
+      <li class="post">
+        <a href="http://coding4ever.net/blog/2016/03/26/membuat-user-function-library-pada-crystal-report-net/">Membuat User Function Library Pada Crystal Report .NET</a>
+      </li>
+    
+  </ul>
+</section>
+<section class="first even">
+  <h1>Categories</h1>
+    <ul id="category-list"><li><a href="http://coding4ever.net/blog/categories/dot-net-remoting/">.net remoting (9)</a></li><li><a href="http://coding4ever.net/blog/categories/active-report/">active report (4)</a></li><li><a href="http://coding4ever.net/blog/categories/android/">android (1)</a></li><li><a href="http://coding4ever.net/blog/categories/aplikasi/">aplikasi (4)</a></li><li><a href="http://coding4ever.net/blog/categories/autoupdater-dot-net/">autoupdater.net (1)</a></li><li><a href="http://coding4ever.net/blog/categories/build-events/">build events (3)</a></li><li><a href="http://coding4ever.net/blog/categories/continuous-integration/">continuous integration (4)</a></li><li><a href="http://coding4ever.net/blog/categories/crashreporter-dot-net/">crashreporter.net (1)</a></li><li><a href="http://coding4ever.net/blog/categories/crystal-reports-net/">crystal reports .net (4)</a></li><li><a href="http://coding4ever.net/blog/categories/dapper-net/">dapper .net (6)</a></li><li><a href="http://coding4ever.net/blog/categories/database/">database (2)</a></li><li><a href="http://coding4ever.net/blog/categories/entity-framework/">entity framework (9)</a></li><li><a href="http://coding4ever.net/blog/categories/firebird/">firebird (12)</a></li><li><a href="http://coding4ever.net/blog/categories/freeware/">freeware (7)</a></li><li><a href="http://coding4ever.net/blog/categories/inno-setup/">inno setup (6)</a></li><li><a href="http://coding4ever.net/blog/categories/jaringan/">jaringan (1)</a></li><li><a href="http://coding4ever.net/blog/categories/jenkins/">jenkins (2)</a></li><li><a href="http://coding4ever.net/blog/categories/mysql/">mysql (10)</a></li><li><a href="http://coding4ever.net/blog/categories/nsis/">nsis (2)</a></li><li><a href="http://coding4ever.net/blog/categories/nuget/">nuget (5)</a></li><li><a href="http://coding4ever.net/blog/categories/repository-pattern/">repository pattern (2)</a></li><li><a href="http://coding4ever.net/blog/categories/signalr/">signalr (2)</a></li><li><a href="http://coding4ever.net/blog/categories/software-testing/">software testing (5)</a></li><li><a href="http://coding4ever.net/blog/categories/source-control/">source control (1)</a></li><li><a href="http://coding4ever.net/blog/categories/sql-server/">sql server (1)</a></li><li><a href="http://coding4ever.net/blog/categories/sql-server-2000/">sql server 2000 (1)</a></li><li><a href="http://coding4ever.net/blog/categories/sqlite/">sqlite (3)</a></li><li><a href="http://coding4ever.net/blog/categories/tools-installer/">tools installer (8)</a></li><li><a href="http://coding4ever.net/blog/categories/uncategorized/">uncategorized (8)</a></li><li><a href="http://coding4ever.net/blog/categories/unit-of-work-pattern/">unit of work pattern (1)</a></li><li><a href="http://coding4ever.net/blog/categories/version-control/">version control (1)</a></li><li><a href="http://coding4ever.net/blog/categories/visual-basic/">visual basic (74)</a></li><li><a href="http://coding4ever.net/blog/categories/visual-basic-net/">visual basic .net (11)</a></li><li><a href="http://coding4ever.net/blog/categories/visual-c-number/">visual c# (48)</a></li><li><a href="http://coding4ever.net/blog/categories/visual-studio-net/">visual studio .net (3)</a></li><li><a href="http://coding4ever.net/blog/categories/wcf/">wcf (4)</a></li><li><a href="http://coding4ever.net/blog/categories/winsock/">winsock (6)</a></li></ul>
+</section>
+<section class="odd">
+  <h1>Tag Cloud</h1>
+    <span id="tag-cloud"><a href="http://coding4ever.net/blog/categories/dot-net-remoting" style="font-size: 107.29729729729729%">.net remoting(9)</a> <a href="http://coding4ever.net/blog/categories/active-report" style="font-size: 103.24324324324324%">active report(4)</a> <a href="http://coding4ever.net/blog/categories/android" style="font-size: 100.8108108108108%">android(1)</a> <a href="http://coding4ever.net/blog/categories/aplikasi" style="font-size: 103.24324324324324%">aplikasi(4)</a> <a href="http://coding4ever.net/blog/categories/autoupdater-dot-net" style="font-size: 100.8108108108108%">autoupdater.net(1)</a> <a href="http://coding4ever.net/blog/categories/build-events" style="font-size: 102.43243243243244%">build events(3)</a> <a href="http://coding4ever.net/blog/categories/continuous-integration" style="font-size: 103.24324324324324%">continuous integration(4)</a> <a href="http://coding4ever.net/blog/categories/crashreporter-dot-net" style="font-size: 100.8108108108108%">crashreporter.net(1)</a> <a href="http://coding4ever.net/blog/categories/crystal-reports-net" style="font-size: 103.24324324324324%">crystal reports .net(4)</a> <a href="http://coding4ever.net/blog/categories/dapper-net" style="font-size: 104.86486486486487%">dapper .net(6)</a> <a href="http://coding4ever.net/blog/categories/database" style="font-size: 101.62162162162163%">database(2)</a> <a href="http://coding4ever.net/blog/categories/entity-framework" style="font-size: 107.29729729729729%">entity framework(9)</a> <a href="http://coding4ever.net/blog/categories/firebird" style="font-size: 109.72972972972973%">firebird(12)</a> <a href="http://coding4ever.net/blog/categories/freeware" style="font-size: 105.67567567567568%">freeware(7)</a> <a href="http://coding4ever.net/blog/categories/inno-setup" style="font-size: 104.86486486486487%">inno setup(6)</a> <a href="http://coding4ever.net/blog/categories/jaringan" style="font-size: 100.8108108108108%">jaringan(1)</a> <a href="http://coding4ever.net/blog/categories/jenkins" style="font-size: 101.62162162162163%">jenkins(2)</a> <a href="http://coding4ever.net/blog/categories/mysql" style="font-size: 108.10810810810811%">mysql(10)</a> <a href="http://coding4ever.net/blog/categories/nsis" style="font-size: 101.62162162162163%">nsis(2)</a> <a href="http://coding4ever.net/blog/categories/nuget" style="font-size: 104.05405405405405%">nuget(5)</a> <a href="http://coding4ever.net/blog/categories/repository-pattern" style="font-size: 101.62162162162163%">repository pattern(2)</a> <a href="http://coding4ever.net/blog/categories/signalr" style="font-size: 101.62162162162163%">signalr(2)</a> <a href="http://coding4ever.net/blog/categories/software-testing" style="font-size: 104.05405405405405%">software testing(5)</a> <a href="http://coding4ever.net/blog/categories/source-control" style="font-size: 100.8108108108108%">source control(1)</a> <a href="http://coding4ever.net/blog/categories/sql-server" style="font-size: 100.8108108108108%">sql server(1)</a> <a href="http://coding4ever.net/blog/categories/sql-server-2000" style="font-size: 100.8108108108108%">sql server 2000(1)</a> <a href="http://coding4ever.net/blog/categories/sqlite" style="font-size: 102.43243243243244%">sqlite(3)</a> <a href="http://coding4ever.net/blog/categories/tools-installer" style="font-size: 106.48648648648648%">tools installer(8)</a> <a href="http://coding4ever.net/blog/categories/uncategorized" style="font-size: 106.48648648648648%">uncategorized(8)</a> <a href="http://coding4ever.net/blog/categories/unit-of-work-pattern" style="font-size: 100.8108108108108%">unit of work pattern(1)</a> <a href="http://coding4ever.net/blog/categories/version-control" style="font-size: 100.8108108108108%">version control(1)</a> <a href="http://coding4ever.net/blog/categories/visual-basic" style="font-size: 160.0%">visual basic(74)</a> <a href="http://coding4ever.net/blog/categories/visual-basic-net" style="font-size: 108.91891891891892%">visual basic .net(11)</a> <a href="http://coding4ever.net/blog/categories/visual-c-number" style="font-size: 138.9189189189189%">visual c#(48)</a> <a href="http://coding4ever.net/blog/categories/visual-studio-net" style="font-size: 102.43243243243244%">visual studio .net(3)</a> <a href="http://coding4ever.net/blog/categories/wcf" style="font-size: 103.24324324324324%">wcf(4)</a> <a href="http://coding4ever.net/blog/categories/winsock" style="font-size: 104.86486486486487%">winsock(6)</a> </span>
+</section>
+
+<section class="even">
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos"><li><a href="https://github.com/k4m4r82/Northwind">Northwind</a><p>Contoh aplikasi desktop menggunakan database Northwind</p></li><li><a href="https://github.com/k4m4r82/DemoIntegrationTesting2">DemoIntegrationTesting2</a><p>Demo Integration Testing Menggunakan NUnit dan NDbUnit</p></li><li><a href="https://github.com/k4m4r82/DemoIntegrationTesting">DemoIntegrationTesting</a><p>Demo Integration Testing Menggunakan NUnit</p></li><li><a href="https://github.com/k4m4r82/DemoCoverageTesting">DemoCoverageTesting</a><p>Demo Coverage Testing Menggunakan NUnit, OpenCover Dan Report Generator</p></li><li><a href="https://github.com/k4m4r82/DemoUnitTesting">DemoUnitTesting</a><p>Demo Unit Testing menggunakan NUnit</p></li><li><a href="https://github.com/k4m4r82/RepositoryPattern2">RepositoryPattern2</a><p>Contoh implementasi Repository Pattern menggunakan bahasa pemrograman C# </p></li><li><a href="https://github.com/k4m4r82/DemoUFLforCR">DemoUFLforCR</a><p>Demo Membuat User Function Library pada Crystal Report .NET</p></li><li><a href="https://github.com/k4m4r82/UnitOfWorkPattern">UnitOfWorkPattern</a><p>Contoh implementasi Unit of Work Pattern menggunakan bahasa pemrograman C#</p></li><li><a href="https://github.com/k4m4r82/RepositoryPattern">RepositoryPattern</a><p>Contoh implementasi Repository Pattern menggunakan bahasa pemrograman C#</p></li><li><a href="https://github.com/k4m4r82/DemoSignalR2">DemoSignalR2</a><p>Contoh aplikasi sederhana untuk pembuatan aplikasi real-time menggunakan SignalR</p></li><li><a href="https://github.com/k4m4r82/DemoTransactionVB6">DemoTransactionVB6</a><p>Contoh penggunaan collection dan transaction pada Visual Basic 6</p></li><li><a href="https://github.com/k4m4r82/DemoSignalR">DemoSignalR</a><p>Contoh aplikasi sederhana untuk pembuatan aplikasi real-time menggunakan SignalR</p></li><li><a href="https://github.com/k4m4r82/RemoveMainReportTabOnCRViewer">RemoveMainReportTabOnCRViewer</a><p>Contoh aplikasi untuk menghilangkan tab Main Report pada CrystalReportViewer</p></li><li><a href="https://github.com/k4m4r82/DemoCRPushModel2">DemoCRPushModel2</a><p>Contoh Membuat Laporan Crystal Reports‎ .NET dengan Model Data-Push</p></li><li><a href="https://github.com/k4m4r82/DemoAutoUpdaterDotNet">DemoAutoUpdaterDotNet</a><p>Contoh membuat auto update aplikasi dengan bahasa C#</p></li><li><a href="https://github.com/k4m4r82/DemoOnlineBackup">DemoOnlineBackup</a><p>Contoh upload file ke google drive dengan bahasa C#</p></li><li><a href="https://github.com/k4m4r82/QRCodeLib">QRCodeLib</a><p>QRCodeLib for .NET created by Aaron Ogan (https://github.com/aaronogan)</p></li></ul>
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'k4m4r82',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="./Entity Framework Part 1 - Coding4ever’s Blog_files/github.js.download" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+
+    <span class="toggle-sidebar"></span></div>
+  </div>
+  <footer role="contentinfo"><p align="center">
+  Copyright © 2009 - 2016 - Admin -
+  <span class="credit">Powered by <a href="http://octopress.org/">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'coding4ever';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://coding4ever.net/blog/2014/03/18/entity-framework-part-1/';
+        var disqus_url = 'http://coding4ever.net/blog/2014/03/18/entity-framework-part-1/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Entity Framework Part 1 - Coding4ever’s Blog_files/fTmIQU3LxvB.html" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Entity Framework Part 1 - Coding4ever’s Blog_files/fTmIQU3LxvB(1).html" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="f2c2501eed29b8" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" src="./Entity Framework Part 1 - Coding4ever’s Blog_files/ping.html" style="display: none;"></iframe></div></div></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+
+
+
+
+
+
+<iframe style="display: none;" src="./Entity Framework Part 1 - Coding4ever’s Blog_files/saved_resource(1).html"></iframe></body></html>
